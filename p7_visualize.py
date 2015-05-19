@@ -1,7 +1,13 @@
+import subprocess
+import json
+import collections
+import random
+import sys
+
 def solve(*args):
     """Run clingo with the provided argument list and return the parsed JSON result."""
     
-    CLINGO = "./clingo-4.5.0-macos-10.9/clingo"
+    CLINGO = "./clingo-4.5.0-win64/clingo.exe"
     
     clingo = subprocess.Popen(
         [CLINGO, "--outf=2"] + list(args),
@@ -12,7 +18,7 @@ def solve(*args):
         print err
         
     return parse_json_result(out)
-
+    
 def parse_json_result(out):
     """Parse the provided JSON text and extract a dict
     representing the predicates described in the first solver result."""
@@ -81,3 +87,7 @@ def side_by_side(*blocks):
     for tup in zip(*map(lambda b: b.split('\n'), blocks)):
         lines.append(' '.join(tup))
     return '\n'.join(lines)
+    
+data = open(sys.argv[1]).read().replace('\n', '')
+map = parse_json_result(data)
+print (render_ascii_dungeon(map))
