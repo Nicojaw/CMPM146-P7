@@ -1,5 +1,3 @@
-
-C:\Users\Public\Documents\UCSC\CMPM146\CMPM146-P7>"C:\Users\Public\Documents\UCSC\CMPM146\CMPM146-P7\clingo-4.5.0-win64\clingo.exe" level-core.lp level-style.lp level-sim.lp --sign-def=3 --outf=2 
 {
   "Solver": "clingo version 4.5.0",
   "Input": [

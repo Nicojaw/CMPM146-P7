@@ -1,0 +1,32 @@
+{
+  "Solver": "clingo version 4.5.0",
+  "Input": [
+    "-","meta.lp","metaD.lp","metaO.lp","metaS.lp"
+  ],
+  "Call": [
+    {
+      "Witnesses": [
+        {
+          "Value": [
+            
+          ]
+        }
+      ]
+    }
+  ],
+  "Result": "SATISFIABLE",
+  "Models": {
+    "Number": 1,
+    "More": "no"
+  },
+  "Calls": 1,
+  "Time": {
+    "Total": 0.092,
+    "Solve": 0.001,
+    "Model": 0.001,
+    "Unsat": 0.000,
+    "CPU": 0.047
+  },
+  "Threads": 4,
+  "Winner": 3
+}
