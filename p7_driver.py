@@ -4,13 +4,18 @@ import collections
 import random
 import sys
 
-CLINGO = ".\clingo-4.5.0-win64\clingo.exe"
-GRINGO = ".\clingo-4.5.0-win64\gringo.exe"
-REIFY = ".\clingo-4.5.0-win64\\reify.exe"
-    
+CLINGO = ".\\clingo\\clingo.exe"
+GRINGO = ".\\clingo\\gringo.exe"
+REIFY = ".\\clingo\\reify.exe"
+
+# gringo = subprocess.Popen(['.\\clingo\\gringo.exe level-core.lp level-style.lp level-sim.lp level-shortcuts.lp -c width=7 | .\\clingo\reify.exe | .\\clingo\clingo.exe --outf=2'])
+# out, err = gringo.communicate()
+# print "end gringo"
+# if err:
+    # print (err)
 print "gringo"
 gringo = subprocess.Popen(
-    [GRINGO, "level-core.lp", "level-style.lp", "level-sim.lp", "level-shortcuts.lp"],
+    [GRINGO, "level-core.lp", "level-style.lp", "level-sim.lp", "level-shortcuts.lp", "-c width=7"],
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
     shell=True)

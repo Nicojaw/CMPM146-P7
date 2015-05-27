@@ -24,7 +24,7 @@ touch(T2,S2) :- step(T1,S1,T2,S2).
 %:- sprite(T,trap); touch(T,S); S > 1.
 
 % can only step on traps in state 2
-:- sprite(T,trap); touch(T,S); S \= 2.
+:- sprite(T,trap); touch(T,S); S != 2.
 
 
 % the finish tile must be touched in state 3
